@@ -1,46 +1,24 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
- * SPDX-License-Identifier: AGPL-3.0-only
- * See the LICENSE file for details.
+ * Mars IT School — Edition badge
  */
 
-import { useState } from "react";
 import { observer } from "mobx-react";
-// ui
-import { useTranslation } from "@plane/i18n";
 import { Tooltip } from "@plane/propel/tooltip";
-// hooks
 import { usePlatformOS } from "@/hooks/use-platform-os";
 import packageJson from "package.json";
-// local components
-import { PaidPlanUpgradeModal } from "../license";
-import { Button } from "@plane/propel/button";
 
 export const WorkspaceEditionBadge = observer(function WorkspaceEditionBadge() {
-  // states
-  const [isPaidPlanPurchaseModalOpen, setIsPaidPlanPurchaseModalOpen] = useState(false);
-  // translation
-  const { t } = useTranslation();
-  // platform
   const { isMobile } = usePlatformOS();
 
   return (
-    <>
-      <PaidPlanUpgradeModal
-        isOpen={isPaidPlanPurchaseModalOpen}
-        handleClose={() => setIsPaidPlanPurchaseModalOpen(false)}
-      />
-      <Tooltip tooltipContent={`Version: v${packageJson.version}`} isMobile={isMobile}>
-        <Button
-          variant="tertiary"
-          size="lg"
-          onClick={() => setIsPaidPlanPurchaseModalOpen(true)}
-          aria-haspopup="dialog"
-          aria-label={t("aria_labels.projects_sidebar.edition_badge")}
-        >
-          Community
-        </Button>
-      </Tooltip>
-    </>
+    <Tooltip tooltipContent={`Version: v${packageJson.version}`} isMobile={isMobile}>
+      <div className="flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium text-tertiary">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+          <path d="M12 2L2 7v10l10 5 10-5V7L12 2z" fill="#7C3AED" />
+          <path d="M12 6l-5 2.5v5L12 16l5-2.5v-5L12 6z" fill="white" />
+        </svg>
+        Mars PM
+      </div>
+    </Tooltip>
   );
 });
