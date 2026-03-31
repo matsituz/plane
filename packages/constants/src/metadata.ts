@@ -4,14 +4,14 @@
  * See the LICENSE file for details.
  */
 
-export const SITE_NAME = "Plane | Simple, extensible, open-source project management tool.";
-export const SITE_TITLE = "Plane | Simple, extensible, open-source project management tool.";
+export const SITE_NAME = "Mars PM | Project Management for Mars IT School";
+export const SITE_TITLE = "Mars PM | Project Management for Mars IT School";
 export const SITE_DESCRIPTION =
-  "Open-source project management tool to manage work items, cycles, and product roadmaps easily";
+  "Internal project management tool for Mars IT School team";
 export const SITE_KEYWORDS =
-  "software development, plan, ship, software, accelerate, code management, release management, project management, work items tracking, agile, scrum, kanban, collaboration";
-export const SITE_URL = "https://app.plane.so/";
-export const TWITTER_USER_NAME = "Plane | Simple, extensible, open-source project management tool.";
+  "mars it school, project management, task tracking, team collaboration";
+export const SITE_URL = "https://plane.marshub.uz/";
+export const TWITTER_USER_NAME = "Mars IT School";
 
 // Plane Sites Metadata
 export const SPACE_SITE_NAME = "Plane Publish | Make your Plane boards and roadmaps pubic with just one-click. ";
