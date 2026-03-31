@@ -44,6 +44,7 @@ from .views import (
     GiteaOauthInitiateEndpoint,
     GiteaCallbackSpaceEndpoint,
     GiteaOauthInitiateSpaceEndpoint,
+    MarsIdAuthEndpoint,
 )
 
 urlpatterns = [
@@ -150,4 +151,6 @@ urlpatterns = [
         GiteaCallbackSpaceEndpoint.as_view(),
         name="space-gitea-callback",
     ),
+    ## Mars ID
+    path("mars-id/", MarsIdAuthEndpoint.as_view(), name="mars-id-auth"),
 ]
